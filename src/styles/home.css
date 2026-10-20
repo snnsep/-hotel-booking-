@@ -121,7 +121,7 @@
   height: 48px;
   border-radius: 14px;
   background: rgba(13, 148, 136, 0.12);
-  font-size: 1.35rem;
+  color: var(--teal-dark);
   margin-bottom: 14px;
 }
 

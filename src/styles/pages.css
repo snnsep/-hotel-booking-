@@ -102,8 +102,16 @@
 }
 
 .detail__address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: var(--muted);
   margin-bottom: 10px;
+}
+
+.detail__address svg {
+  flex: none;
+  color: var(--teal-dark);
 }
 
 .detail__rating {

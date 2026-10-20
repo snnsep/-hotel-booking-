@@ -1,27 +1,28 @@
 import { Link } from 'react-router-dom'
 import SearchBar from '../components/SearchBar.jsx'
 import HotelCard from '../components/HotelCard.jsx'
+import Icon from '../components/Icon.jsx'
 import { hotels } from '../data/hotels.js'
 import '../styles/home.css'
 
 const features = [
   {
-    icon: '🏨',
+    icon: 'hotel',
     title: 'Khách sạn đã kiểm duyệt',
     desc: 'Mỗi khách sạn đều được đội ngũ AzureStay xác minh hình ảnh, tiện ích và giá phòng trước khi đăng tải.',
   },
   {
-    icon: '💳',
+    icon: 'tag',
     title: 'Giá tốt, không phí ẩn',
     desc: 'Giá hiển thị là giá cuối cùng cho mỗi đêm. Không phụ phí, không cộng thêm khi thanh toán.',
   },
   {
-    icon: '⚡',
+    icon: 'bolt',
     title: 'Đặt phòng 60 giây',
     desc: 'Chỉ cần họ tên, số điện thoại và khoảng ngày lưu trú — không cần tạo tài khoản.',
   },
   {
-    icon: '🛟',
+    icon: 'support',
     title: 'Hỗ trợ 24/7',
     desc: 'Tổng đài 1900 1234 trực 24/7 để xử lý đổi ngày, huỷ phòng và các sự cố khi nhận phòng.',
   },
@@ -106,7 +107,7 @@ export default function Home() {
             {features.map((feature) => (
               <article className="feature" key={feature.title}>
                 <span className="feature__icon" aria-hidden="true">
-                  {feature.icon}
+                  <Icon name={feature.icon} size={24} />
                 </span>
                 <h3>{feature.title}</h3>
                 <p>{feature.desc}</p>

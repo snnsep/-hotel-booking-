@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import Icon from '../components/Icon.jsx'
 import { hotels, roomTypes, formatVnd } from '../data/hotels.js'
 import '../styles/pages.css'
 
@@ -30,7 +31,9 @@ export default function HotelDetail() {
         <div className="detail__head">
           <div>
             <h1>{hotel.name}</h1>
-            <p className="detail__address">📍 {hotel.address}</p>
+            <p className="detail__address">
+              <Icon name="pin" size={17} /> {hotel.address}
+            </p>
             <ul className="hotel-card__tags">
               {hotel.tags.map((tag) => (
                 <li key={tag}>{tag}</li>

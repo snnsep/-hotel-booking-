@@ -78,12 +78,13 @@
 
 .navbar__toggle {
   display: none;
+  place-items: center;
   border: 1px solid var(--line);
   background: var(--white);
   border-radius: 10px;
   width: 42px;
   height: 42px;
-  font-size: 1.2rem;
+  color: var(--navy);
   cursor: pointer;
 }
 
@@ -270,7 +271,7 @@
 
 @media (max-width: 860px) {
   .navbar__toggle {
-    display: block;
+    display: grid;
   }
 
   .navbar__nav {
